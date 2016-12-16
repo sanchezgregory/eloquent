@@ -16,4 +16,6 @@ use Faker\Factory as Faker;
 
 Route::get('/', 'PagesController@home')->name('home');
 
-Route::get('/all', 'QueryController@getAll')->name('all');
+Route::get('/all', 'QueryController@eloquentAll')->name('eloquentAll');
+
+Route::get('/get/{gender}', 'QueryController@eloquentGet')->name('eloquentGet');

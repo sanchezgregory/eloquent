@@ -7,11 +7,21 @@ use Illuminate\Http\Request;
 
 class QueryController extends Controller
 {
-    public function getAll()
+    public function eloquentAll()
     {
 
         $users = User::all();
+        $title = "Todos los usuarios (ALL)";
 
-        return view('query.all', compact('users'));
+        return view('query.methods', compact('title', 'users'));
+    }
+
+    public function eloquentGet($gender)
+    {
+
+        $title = "Todos Los Usuarios ".$gender;
+        $users = User::where('gender', $gender)
+            ->get();
+        return view('query.get', compact('title', 'users'));
     }
 }
