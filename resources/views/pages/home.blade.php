@@ -1,12 +1,35 @@
 @extends('layout')
 
 @section('content')
-    <div class="jumbotron">
-        <div class="container">
-            <h1> Curso Eloquent</h1>
-            <p>Texto</p>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1> Curso Eloquent</h1>
+                <p>{{ $title }}</p>
+            </div>
         </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Gender
+                    </th>
+                    <th>
+                        Biography
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @include('partials.list-users')
+            </tbody>
+        </table>
     </div>
-    <p>Hola home</p>
 
 @endsection

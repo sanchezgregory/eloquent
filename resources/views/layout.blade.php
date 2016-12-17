@@ -23,7 +23,7 @@
                             Consultas Eloquent
                             <span class="caret"></span>
                         </a>
-                        @include('query.partials.menuQuery')
+                        @include('partials.menuQuery')
                     </li>
                 </ul>
             </div>
