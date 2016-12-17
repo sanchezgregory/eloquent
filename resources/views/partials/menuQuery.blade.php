@@ -24,4 +24,9 @@
             Select con usuarios
         </a>
     </li>
+    <li>
+        <a href="{{ route('eloquentFirstLast') }}">
+            Primer y ultimo registro
+        </a>
+    </li>
 </ul>

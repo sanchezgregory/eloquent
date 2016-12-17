@@ -25,3 +25,5 @@ Route::get('/get', 'QueryController@eloquentGetCustom')->name('eloquentGetCustom
 Route::delete('/delete/{id}', 'QueryController@eloquentDelete')->name('eloquentDelete');
 
 Route::get('/lists', 'QueryController@eloquentLists')->name('eloquentLists');
+
+Route::get('/firstLast', 'QueryController@eloquentFirstLast')->name('eloquentFirstLast');
