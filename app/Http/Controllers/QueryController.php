@@ -32,4 +32,13 @@ class QueryController extends Controller
             //User::where('gender','f')->get(['id', 'name', 'email']); // tambien sirve asi.
         return view('query.get', compact('title', 'users'));
     }
+
+    public function eloquentDelete($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+        $title = "Ultimos 10 Usuarios";
+        $users = User::orderBy('id','DESC')->take(10)->get();
+        return view('pages.home', compact('title','users'));
+    }
 }

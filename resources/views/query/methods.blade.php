@@ -12,6 +12,7 @@
                     <th>Email</th>
                     <th>Genero</th>
                     <th>Biografia</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>

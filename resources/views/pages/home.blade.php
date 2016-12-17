@@ -24,6 +24,7 @@
                     <th>
                         Biography
                     </th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
