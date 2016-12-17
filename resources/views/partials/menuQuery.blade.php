@@ -29,4 +29,10 @@
             Primer y ultimo registro
         </a>
     </li>
+
+    <li>
+        <a href="{{ route('eloquentPaginate') }}">
+            Paginacion
+        </a>
+    </li>
 </ul>

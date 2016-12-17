@@ -27,3 +27,5 @@ Route::delete('/delete/{id}', 'QueryController@eloquentDelete')->name('eloquentD
 Route::get('/lists', 'QueryController@eloquentLists')->name('eloquentLists');
 
 Route::get('/firstLast', 'QueryController@eloquentFirstLast')->name('eloquentFirstLast');
+
+Route::get('/paginate', 'QueryController@eloquentPaginate')->name('eloquentPaginate');
