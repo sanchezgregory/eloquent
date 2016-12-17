@@ -19,3 +19,5 @@ Route::get('/', 'PagesController@home')->name('home');
 Route::get('/all', 'QueryController@eloquentAll')->name('eloquentAll');
 
 Route::get('/get/{gender}', 'QueryController@eloquentGet')->name('eloquentGet');
+
+Route::get('/get', 'QueryController@eloquentGetCustom')->name('eloquentGetCustom');

@@ -24,4 +24,12 @@ class QueryController extends Controller
             ->get();
         return view('query.get', compact('title', 'users'));
     }
+    public function eloquentGetCustom()
+    {
+
+        $title = "Todos Los Usuarios Get Custom";
+        $users = User::all(['id','name','email']);
+            //User::where('gender','f')->get(['id', 'name', 'email']); // tambien sirve asi.
+        return view('query.get', compact('title', 'users'));
+    }
 }
