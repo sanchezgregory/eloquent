@@ -41,4 +41,12 @@ class QueryController extends Controller
         $users = User::orderBy('id','DESC')->take(10)->get();
         return view('pages.home', compact('title','users'));
     }
+
+    public function eloquentLists()
+    {
+        $users = User::orderBy('name','ASC')->get(['name','id']);
+        $title = "lista de usuarios";
+
+        return view('query.lists', compact('users', 'title'));
+    }
 }

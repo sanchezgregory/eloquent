@@ -12,18 +12,10 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>
-                        Nombre
-                    </th>
-                    <th>
-                        Email
-                    </th>
-                    <th>
-                        Gender
-                    </th>
-                    <th>
-                        Biography
-                    </th>
+                    <th> Nombre </th>
+                    <th> Email</th>
+                    <th>Gender</th>
+                    <th>Biography</th>
                     <th>Acciones</th>
                 </tr>
             </thead>

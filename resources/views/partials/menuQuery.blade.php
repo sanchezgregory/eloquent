@@ -19,4 +19,9 @@
             Usuarios con Get con arrays
         </a>
     </li>
+    <li>
+        <a href="{{ route('eloquentLists') }}">
+            Select con usuarios
+        </a>
+    </li>
 </ul>

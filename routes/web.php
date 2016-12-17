@@ -23,3 +23,5 @@ Route::get('/get/{gender}', 'QueryController@eloquentGet')->name('eloquentGet');
 Route::get('/get', 'QueryController@eloquentGetCustom')->name('eloquentGetCustom');
 
 Route::delete('/delete/{id}', 'QueryController@eloquentDelete')->name('eloquentDelete');
+
+Route::get('/lists', 'QueryController@eloquentLists')->name('eloquentLists');
