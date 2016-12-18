@@ -25,6 +25,13 @@
                         </a>
                         @include('partials.menuQuery')
                     </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                            Consultas Con libros
+                            <span class="caret"></span>
+                        </a>
+                        @include('partials.menuQuery2')
+                    </li>
                 </ul>
             </div>
 

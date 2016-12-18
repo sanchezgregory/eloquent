@@ -11,8 +11,11 @@
 |
 */
 
+use App\Category;
 use App\User;
+use App\Book;
 use Faker\Factory as Faker;
+use Illuminate\Http\Request;
 
 Route::get('/', 'PagesController@home')->name('home');
 
@@ -29,3 +32,16 @@ Route::get('/lists', 'QueryController@eloquentLists')->name('eloquentLists');
 Route::get('/firstLast', 'QueryController@eloquentFirstLast')->name('eloquentFirstLast');
 
 Route::get('/paginate', 'QueryController@eloquentPaginate')->name('eloquentPaginate');
+
+Route::get('/delete', 'BookController@preDestroy')->name('eloquentDestroyBook');
+
+Route::delete('/destroy', function(Request $request) {
+    $ids = $request->get('ids');
+
+    if(count($ids)) Book::destroy($ids);
+
+    return back();
+});
+
+Route::get('/relationBook', 'BookController@bookCategory')->name('bookCategory');
+

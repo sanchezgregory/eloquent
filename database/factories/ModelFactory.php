@@ -23,3 +23,19 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => $faker->randomElement([null,str_random(10)])
     ];
 });
+
+$factory->define(App\Book::class, function (Faker\Generator $faker) {
+
+    return [
+        'category_id' => $faker->randomElement([1,2,3,4,5]),
+        'title' => $faker->sentence(10,20),
+        'description' => $faker->text(rand(20,50))
+    ];
+});
+
+$factory->define(App\Category::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->randomElement(['PHP','HTML','JAVASCRIPT','PYTHON','CSS'])
+    ];
+});
