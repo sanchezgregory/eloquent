@@ -16,4 +16,19 @@ class Category extends Model
     {
         return $this->books->count();
     }
+
+    public function getPublicBooksCountAttribute()
+    {
+        return count($this->books->where('status','Publico'));
+    }
+
+    public function getBorradorBooksCountAttribute()
+    {
+        return $this->books->where('status','Borrador')->count();
+    }
+
+    public function getPublicBooksAttribute()
+    {
+        return $this->books->where('status','Publico');
+    }
 }

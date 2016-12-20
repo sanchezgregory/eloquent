@@ -11,6 +11,20 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Category::class, 5)->create();
+        factory(\App\Category::class)->create([
+            'name' => 'PHP'
+        ]);
+        factory(\App\Category::class)->create([
+            'name' => 'Html'
+        ]);
+        factory(\App\Category::class)->create([
+            'name' => 'Java'
+        ]);
+        factory(\App\Category::class)->create([
+            'name' => 'Sql'
+        ]);
+        factory(\App\Category::class)->create([
+            'name' => 'Python'
+        ]);
     }
 }

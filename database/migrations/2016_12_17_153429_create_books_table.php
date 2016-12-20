@@ -16,14 +16,15 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('category_id');
+            $table->integer('category_id')->unsigned();
             $table->text('title');
             $table->string('description');
+            $table->enum('status', ['Publico', 'Borrador'])->default('Borrador');
 
             $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('category_id')->references('id')->on('category')
+            $table->foreign('category_id')->references('id')->on('categories')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }

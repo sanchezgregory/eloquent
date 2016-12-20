@@ -24,18 +24,27 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Book::class, function (Faker\Generator $faker) {
-
-    return [
-        'category_id' => $faker->randomElement([1,2,3,4,5]),
-        'title' => $faker->sentence(10,20),
-        'description' => $faker->text(rand(20,50))
-    ];
-});
-
 $factory->define(App\Category::class, function (Faker\Generator $faker) {
 
     return [
         'name' => $faker->randomElement(['PHP','HTML','JAVASCRIPT','PYTHON','CSS'])
+    ];
+});
+
+$factory->define(App\Book::class, function (Faker\Generator $faker) {
+
+    return [
+        'category_id' => $faker->randomElement([1,2,3,4]),
+        'title' => $faker->sentence(10,20),
+        'description' => $faker->text(rand(20,50)),
+        'status' => $faker->randomElement(['Publico','Borrador'])
+    ];
+});
+
+$factory->define(App\BookUser::class, function (Faker\Generator $faker) {
+
+    return [
+        'book_id' => rand(1,30),
+        'user_id' => rand(1,30)
     ];
 });
